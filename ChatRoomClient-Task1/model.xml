@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel>
+		<properties/>
+		<struct>
+			<and abstract="true" mandatory="true" name="ChatRoomClientTask1">
+				<description>
+					Client of chat room software, there is a Server for it.
+				</description>
+				<description>
+					Client of chat room software, there is a Server for it.
+				</description>
+				<alt abstract="true" mandatory="true" name="OS">
+					<description>
+						Operating system.
+					</description>
+					<description>
+						Operating system.
+					</description>
+					<feature mandatory="true" name="Linux">
+						<description>
+							Linux.
+						</description>
+					</feature>
+					<feature mandatory="true" name="MacOS">
+						<description>
+							MacOS.
+						</description>
+					</feature>
+					<feature mandatory="true" name="Win">
+						<description>
+							Windows.
+						</description>
+					</feature>
+				</alt>
+				<and abstract="true" mandatory="true" name="Basic">
+					<description>
+						Main part of client.
+					</description>
+					<description>
+						Main part of client.
+					</description>
+					<feature mandatory="true" name="EnterRoom">
+						<description>
+							Enter a chat room based on IP, can be anonymous or login with a user name.
+						</description>
+					</feature>
+					<feature name="LogIn">
+						<description>
+							Login with a user name.
+						</description>
+					</feature>
+					<and mandatory="true" name="Chat">
+						<description>
+							Main functions, chat.
+						</description>
+						<description>
+							Main functions, chat.
+						</description>
+						<feature mandatory="true" name="Send">
+							<description>
+								Send message, to send message you should login with a user name.
+							</description>
+						</feature>
+						<feature mandatory="true" name="Recieve">
+							<description>
+								Recieve message.
+							</description>
+						</feature>
+						<feature mandatory="true" name="Search">
+							<description>
+								Search function (in chat history).
+							</description>
+						</feature>
+					</and>
+				</and>
+				<and abstract="true" mandatory="true" name="Msg">
+					<description>
+						Type of messages to send.
+					</description>
+					<description>
+						Type of messages to send.
+					</description>
+					<feature name="Files">
+						<description>
+							File attachments.
+						</description>
+					</feature>
+					<feature name="Image">
+						<description>
+							Images of graphical emoticons.
+						</description>
+					</feature>
+					<feature mandatory="true" name="Text">
+						<description>
+							Text messages.
+						</description>
+					</feature>
+					<feature name="Voice">
+						<description>
+							Voice messages (30 sec limited)
+						</description>
+					</feature>
+				</and>
+				<and abstract="true" mandatory="true" name="UI">
+					<description>
+						User Interface.
+					</description>
+					<description>
+						User Interface.
+					</description>
+					<feature mandatory="true" name="CL">
+						<description>
+							Command Line, the basic part of UI.
+						</description>
+					</feature>
+					<and name="GUI">
+						<description>
+							Graphical user interface.
+						</description>
+						<description>
+							Graphical user interface.
+						</description>
+						<feature name="Customize">
+							<description>
+								Custom GUI (skin, avatar, font, color etc.)
+							</description>
+						</feature>
+					</and>
+				</and>
+				<or abstract="true" mandatory="true" name="Lang">
+					<description>
+						Supported languages.
+					</description>
+					<description>
+						Supported languages.
+					</description>
+					<feature mandatory="true" name="DE">
+						<description>
+							German.
+						</description>
+					</feature>
+					<feature mandatory="true" name="EN">
+						<description>
+							English.
+						</description>
+					</feature>
+					<feature mandatory="true" name="ZH"/>
+				</or>
+				<and abstract="true" name="Mnmt">
+					<description>
+						Advanced management functions.
+					</description>
+					<description>
+						Advanced management functions.
+					</description>
+					<or mandatory="true" name="Log">
+						<description>
+							Chat history and logs.
+						</description>
+						<description>
+							Chat history and logs.
+						</description>
+						<or mandatory="true" name="Export">
+							<description>
+								Export the logs to local device.
+							</description>
+							<description>
+								Export the logs to local device.
+							</description>
+							<feature mandatory="true" name="Txt">
+								<description>
+									Export logs into TXT file.
+								</description>
+							</feature>
+							<feature mandatory="true" name="DB">
+								<description>
+									Export to database files.
+								</description>
+							</feature>
+							<feature mandatory="true" name="XML">
+								<description>
+									Export to XML files.
+								</description>
+							</feature>
+						</or>
+						<feature mandatory="true" name="Upload">
+							<description>
+								Upload the logs to server.
+							</description>
+						</feature>
+					</or>
+					<and abstract="true" name="Moderation">
+						<description>
+							Advanced functions to moderate a chat room.
+						</description>
+						<description>
+							Advanced functions to moderate a chat room.
+						</description>
+						<feature mandatory="true" name="Filter">
+							<description>
+								Bad words filter, the entries (bad words) will be converted into ***.
+							</description>
+						</feature>
+						<feature mandatory="true" name="Ban">
+							<description>
+								The function to kick/ban some users from this chat room, based on IP.
+							</description>
+						</feature>
+						<feature mandatory="true" name="Pwd">
+							<description>
+								Protect the chat room with password.
+							</description>
+						</feature>
+					</and>
+				</and>
+			</and>
+		</struct>
+		<constraints>
+			<rule>
+				<imp>
+					<var>Mnmt</var>
+					<var>LogIn</var>
+				</imp>
+			</rule>
+		</constraints>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>
