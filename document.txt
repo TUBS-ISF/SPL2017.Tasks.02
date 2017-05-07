@@ -1,0 +1,12 @@
+2017-05-06
+There might be some problems, or maybe I just didn't get the idea of SPL. My project just seems like a "authority control".
+1. It's really hard to load different functions based on config without creating new classes (even java reflection).
+2. A little weird when some features are alternative, there's no "else" in example (I have used some "else").
+3. If some features are mandatory to all the configs, it seems also weird. That's really strange.
+
+2017-05-01
+If you ask me what is SPL, I'd like to say it's a possibility to adjust the software based on user requirements. It's cool but the realisation is annoying. Each software has some basic parts that should be implemented in any case. Then I'd like to say we just make a "base" like a socket (DE: Steckdose) and put other plug-ins onto it.
+
+2017-04-26
+Some of my choosen features seems weird, such as the languages of UI.
+They are not real features, I think.
