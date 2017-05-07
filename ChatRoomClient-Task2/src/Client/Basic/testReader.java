@@ -1,4 +1,4 @@
-package Client.Basic;
+package client.basic;
 
 import java.io.File;
 
@@ -7,10 +7,10 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.w3c.dom.*;
 
-public class testReader {
+public class TestReader {
 	public static void main(String[] args) {
 		test1();
-		new testReader().test2();
+		new TestReader().test2();
 		
 	}
 	

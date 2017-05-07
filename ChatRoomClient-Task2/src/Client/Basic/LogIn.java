@@ -1,4 +1,4 @@
-package Client.Basic;
+package client.basic;
 
 /**
  * Log-in function. Currently abandoned because there's no database for users.

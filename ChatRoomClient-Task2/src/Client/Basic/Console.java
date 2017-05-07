@@ -1,4 +1,4 @@
-package Client.Basic;
+package client.basic;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;

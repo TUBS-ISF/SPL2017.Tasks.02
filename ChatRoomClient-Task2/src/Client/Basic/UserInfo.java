@@ -1,4 +1,4 @@
-package Client.Basic;
+package client.basic;
 
 /**
  * User data, will be used for advanced management function such as moderation.

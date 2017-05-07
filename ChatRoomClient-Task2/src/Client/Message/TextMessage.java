@@ -1,4 +1,4 @@
-package Client.Message;
+package client.message;
 
 import java.io.*;
 

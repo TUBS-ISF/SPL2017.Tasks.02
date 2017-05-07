@@ -1,7 +1,7 @@
-package Client;
+package client;
 
-import Client.Basic.BasicClient;
-import Client.GUI.ClientGUI;
+import client.basic.BasicClient;
+import client.gui.ClientGUI;
 import properties.PropertyManager;
 
 /**

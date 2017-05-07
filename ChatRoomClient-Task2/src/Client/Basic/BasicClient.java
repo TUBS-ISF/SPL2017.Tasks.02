@@ -1,4 +1,4 @@
-package Client.Basic;
+package client.basic;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -13,7 +13,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import Client.Message.TextMessage;
+import client.message.TextMessage;
 import properties.PropertyManager;
 
 /*
@@ -193,7 +193,6 @@ public class BasicClient {
 		this.host = host;
 		this.port = port;
 		fillTexts(lang);
-		// Following code make no sense, but just like the example.
 		if (PropertyManager.getProperty("Send")) {
 			System.out.println("- Send function is available.");
 		}

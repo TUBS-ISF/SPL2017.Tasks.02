@@ -1,11 +1,11 @@
-package Client.GUI;
+package client.gui;
 
 import javax.swing.*;
 import javax.xml.parsers.*;
 
 import org.w3c.dom.*;
 
-import Client.Client;
+import client.Client;
 
 import java.awt.*;
 import java.awt.event.*;
