@@ -1,3 +1,9 @@
+2017-05-18
+For task 3 there're always some annoying things:
+1. If I set some features which will always be activated by all the variants to concret, Feature-IDE will say "this expression is tautoloty ...", but if do not explicitly define/implement them in code, Feature-IDE will say "You should use the feature XXX ..."
+2. Nested code is a big problem, caused too many failures.
+3. It seems that some of my features are not really good features, but it's a little too late to change them.
+
 2017-05-06
 There might be some problems, or maybe I just didn't get the idea of SPL. My project just seems like a "authority control".
 1. It's really hard to load different functions based on config without creating new classes (even java reflection).
