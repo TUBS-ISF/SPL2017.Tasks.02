@@ -1,3 +1,12 @@
+
+2017-06-03
+1. Yes, I'm sure that's a bug. But it works fine even though the error message keeps staying there.
+2. I found the new task (black-box plug-in) really hard, because I have divided some "basic features" into many subfeatures, it's impossible to combine them together from different plug-ins. Maybe yes, but currently I don't know how.
+3. Each time when new plugin is added, Main class must be adjusted, it's a hard work.
+
+2017-05-26
+The feature-IDE framework has bug I think. Always "nullpointer".
+
 2017-05-18
 For task 3 there're always some annoying things:
 1. If I set some features which will always be activated by all the variants to concret, Feature-IDE will say "this expression is tautoloty ...", but if do not explicitly define/implement them in code, Feature-IDE will say "You should use the feature XXX ..."

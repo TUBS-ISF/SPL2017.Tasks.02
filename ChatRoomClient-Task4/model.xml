@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel>
+		<properties/>
+		<struct>
+			<and abstract="true" mandatory="true" name="ChatRoomClient">
+				<description>
+					Client of chat room software, there is a Server for it.
+				</description>
+				<description>
+					Client of chat room software, there is a Server for it.
+				</description>
+				<alt abstract="true" mandatory="true" name="OS">
+					<description>
+						Operating system.
+					</description>
+					<description>
+						Operating system.
+					</description>
+					<feature mandatory="true" name="Linux">
+						<description>
+							Linux.
+						</description>
+					</feature>
+					<feature mandatory="true" name="MacOS">
+						<description>
+							MacOS.
+						</description>
+					</feature>
+					<feature mandatory="true" name="Win">
+						<description>
+							Windows.
+						</description>
+					</feature>
+				</alt>
+				<and abstract="true" mandatory="true" name="Basic">
+					<description>
+						Main part of client.
+					</description>
+					<description>
+						Main part of client.
+					</description>
+					<and mandatory="true" name="EnterRoom">
+						<description>
+							Enter a chat room based on IP, can be anonymous or login with a user name.
+						</description>
+						<description>
+							Enter a chat room based on IP, can be anonymous or login with a user name.
+						</description>
+						<feature abstract="true" name="ChangeRoom">
+							<description>
+								Change to another chatroom with input IP.
+							</description>
+						</feature>
+					</and>
+					<feature abstract="true" name="LogIn">
+						<description>
+							Login with a user name.
+						</description>
+					</feature>
+					<and abstract="true" name="Chat">
+						<description>
+							Main functions, chat.
+						</description>
+						<description>
+							Main functions, chat.
+						</description>
+						<feature name="Send">
+							<description>
+								Send message, to send message you should login with a user name.
+							</description>
+						</feature>
+						<feature mandatory="true" name="Receive">
+							<description>
+								Recieve message.
+							</description>
+						</feature>
+					</and>
+				</and>
+				<and abstract="true" mandatory="true" name="Msg">
+					<description>
+						Type of messages to send.
+					</description>
+					<description>
+						Type of messages to send.
+					</description>
+					<feature abstract="true" name="Files">
+						<description>
+							File attachments.
+						</description>
+					</feature>
+					<feature abstract="true" name="Image">
+						<description>
+							Images of graphical emoticons.
+						</description>
+					</feature>
+					<feature mandatory="true" name="Text">
+						<description>
+							Text messages.
+						</description>
+					</feature>
+					<feature abstract="true" name="Voice">
+						<description>
+							Voice messages (30 sec limited)
+						</description>
+					</feature>
+				</and>
+				<alt abstract="true" mandatory="true" name="UI">
+					<description>
+						User Interface.
+					</description>
+					<description>
+						User Interface.
+					</description>
+					<feature mandatory="true" name="CL">
+						<description>
+							Command Line, the basic part of UI.
+						</description>
+					</feature>
+					<and mandatory="true" name="GUI">
+						<description>
+							Graphical user interface.
+						</description>
+						<description>
+							Graphical user interface.
+						</description>
+						<feature abstract="true" name="Customize">
+							<description>
+								Custom GUI (skin, avatar, font, color etc.)
+							</description>
+						</feature>
+					</and>
+				</alt>
+				<alt abstract="true" name="Lang">
+					<description>
+						Supported languages, will change the text.
+					</description>
+					<description>
+						Supported languages, will change the text.
+					</description>
+					<feature mandatory="true" name="DE">
+						<description>
+							German.
+						</description>
+					</feature>
+					<feature mandatory="true" name="EN">
+						<description>
+							English.
+						</description>
+					</feature>
+					<feature mandatory="true" name="ZH">
+						<description>
+							Chinese.
+						</description>
+					</feature>
+				</alt>
+				<and abstract="true" name="Mnmt">
+					<description>
+						Advanced management functions.
+					</description>
+					<description>
+						Advanced management functions.
+					</description>
+					<or abstract="true" mandatory="true" name="Log">
+						<description>
+							Chat history and logs.
+						</description>
+						<description>
+							Chat history and logs.
+						</description>
+						<or abstract="true" mandatory="true" name="Export">
+							<description>
+								Export the logs to local device.
+							</description>
+							<description>
+								Export the logs to local device.
+							</description>
+							<feature abstract="true" mandatory="true" name="Txt">
+								<description>
+									Export logs into TXT file.
+								</description>
+							</feature>
+							<feature abstract="true" mandatory="true" name="DB">
+								<description>
+									Export to database files.
+								</description>
+							</feature>
+							<feature abstract="true" mandatory="true" name="XML">
+								<description>
+									Export to XML files.
+								</description>
+							</feature>
+						</or>
+						<feature abstract="true" mandatory="true" name="Upload">
+							<description>
+								Upload the logs to server.
+							</description>
+						</feature>
+					</or>
+					<and abstract="true" name="Moderation">
+						<description>
+							Advanced functions to moderate a chat room.
+						</description>
+						<description>
+							Advanced functions to moderate a chat room.
+						</description>
+						<feature abstract="true" mandatory="true" name="Filter">
+							<description>
+								Bad words filter, the entries (bad words) will be converted into ***.
+							</description>
+						</feature>
+						<feature abstract="true" mandatory="true" name="Ban">
+							<description>
+								The function to kick/ban some users from this chat room, based on IP.
+							</description>
+						</feature>
+						<feature abstract="true" mandatory="true" name="Pwd">
+							<description>
+								Protect the chat room with password.
+							</description>
+						</feature>
+					</and>
+				</and>
+			</and>
+		</struct>
+		<constraints>
+			<rule>
+				<imp>
+					<var>Mnmt</var>
+					<var>LogIn</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>GUI</var>
+					<var>Lang</var>
+				</imp>
+			</rule>
+		</constraints>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>

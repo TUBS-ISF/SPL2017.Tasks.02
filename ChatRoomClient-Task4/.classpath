@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="jars/EnterRoom/EnterRoom.jar"/>
+	<classpathentry kind="lib" path="jars/GUI/GUI.jar"/>
+	<classpathentry kind="lib" path="jars/Receive/Receive.jar"/>
+	<classpathentry kind="lib" path="jars/Send/Send.jar"/>
+	<classpathentry kind="lib" path="jars/Text/Text.jar"/>
+	<classpathentry kind="lib" path="jars/Win/Win.jar"/>
+	<classpathentry kind="lib" path="jars/ZH/ZH.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
