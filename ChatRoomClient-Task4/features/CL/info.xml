@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<plugins>
-<!--	<interface id="fullInterfaceName">-->
-<!--		<class>fullClassName</class>-->
-<!--	</interface>-->
-</plugins>
+<plugin>
+	<interface id="interfaces.IStartUI">
+		<class>CommandLine</class>
+	</interface>
+</plugin>

@@ -1,5 +1,6 @@
 import java.util.List;
 
+import interfaces.IEnable;
 import interfaces.ISetLanguage;
 import interfaces.ISetOS;
 import interfaces.IStartUI;
@@ -30,6 +31,10 @@ public class Main {
 		}
 
 		// Third, enable functions
-		// Skip due to lack of time
+		List<IEnable> fList = PluginLoader.load(IEnable.class);
+		for (IEnable f : fList) {
+			f.enable();
+			// System.out.println(ol.getClass().getName());
+		}
 	}
 }
