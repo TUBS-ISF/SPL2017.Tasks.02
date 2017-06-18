@@ -1,3 +1,14 @@
+2017-06-18
+Well, FeatureHouse does not work. I will go back to AHEAD if this problem can't be solved this afternoon.
+I understand, the basic module must be the leftmost, yeah it's my problem because it's alreay mentioned in lecture.
+But...FeatureHouse crashed hundreds times!!! And there're still some small bugs:
+1. As long as you open a configuration, you can not set "current configuration".
+2. Sometimes (most of the time) code can not refresh automatically, you have to set current configuration 2 times or even more.
+3. You can not simply use "ctrl+Z" to recover a deleted feature from model.xml.
+
+2017-06-16
+AHEAD is much easier to use than FeatureHouse because FeatureHouse has some bugs. It will not refresh the code automatically sometimes. But the Hiwi recommanded to use FeatureHouse...
+It crashed many times!!!
 
 2017-06-03
 1. Yes, I'm sure that's a bug. But it works fine even though the error message keeps staying there.
