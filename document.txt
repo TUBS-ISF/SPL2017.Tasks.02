@@ -1,3 +1,6 @@
+2017-06-26
+AspectJ is a good tool, but there is a problem: aspect can not implement serializable. As a result I have to use nested class.
+
 2017-06-18
 Well, FeatureHouse does not work. I will go back to AHEAD if this problem can't be solved this afternoon.
 I understand, the basic module must be the leftmost, yeah it's my problem because it's alreay mentioned in lecture.
