@@ -1,3 +1,6 @@
+2017-10-30
+Job done, credits accomplished. Close project.
+
 2017-06-26
 AspectJ is a good tool, but there is a problem: aspect can not implement serializable. As a result I have to use nested class.
 
